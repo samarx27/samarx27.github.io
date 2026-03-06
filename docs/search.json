@@ -1,10 +1,31 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
+    "objectID": "Interests.html#tidepools",
+    "href": "Interests.html#tidepools",
+    "title": "Interests",
+    "section": "Tidepools",
+    "text": "Tidepools"
+  },
+  {
+    "objectID": "Interests.html#plants",
+    "href": "Interests.html#plants",
+    "title": "Interests",
+    "section": "Plants",
+    "text": "Plants"
+  },
+  {
+    "objectID": "about.html#adventures",
+    "href": "about.html#adventures",
     "title": "About Me",
-    "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
+    "section": "Adventures",
+    "text": "Adventures"
+  },
+  {
+    "objectID": "about.html#goals",
+    "href": "about.html#goals",
+    "title": "About Me",
+    "section": "Goals",
+    "text": "Goals"
   },
   {
     "objectID": "index.html",
