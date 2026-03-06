@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "samarx27.github.io"
+  title: "Sequoia Marx"
   navbar:
     left:
       - href: index.qmd
@@ -13,10 +13,11 @@ website:
 format:
   html:
     theme:
-      - cosmo
+      - solar
       - brand
     css: styles.css
     toc: true
+    page-layout: full
 
 editor: visual
 
