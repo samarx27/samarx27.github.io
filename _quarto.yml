@@ -9,12 +9,14 @@ website:
       - href: index.qmd
         text: Home
       - about.qmd
+      - projects.qmd
+      - Interests.qmd
 
 format:
   html:
     theme:
-      - solar
-      - brand
+      light: solar
+      dark: cerulean
     css: styles.css
     toc: true
     page-layout: full
