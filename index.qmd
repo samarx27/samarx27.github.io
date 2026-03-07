@@ -13,6 +13,6 @@ about:
       href: https://github.com/samarx27
     - text: Email
       href: mailto:sequoiamarx@ucsb.edu
-
 ---
-I am a third year Environmental Studies major at the University of California, Santa Barbara. I am currently serving as the Garden Operations Coordinator for the Methodist Community Garden. I also work for the LEAF lab and the Aquatic Invertebrate Lab with the Cheadle Center. 
+
+I am a third year Environmental Studies major at the University of California, Santa Barbara. I am currently serving as the Garden Operations Coordinator for the Methodist Community Garden. I also work for the LEAF lab and the Aquatic Invertebrate Lab with the Cheadle Center.
