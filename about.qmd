@@ -2,8 +2,10 @@
 title: "About Me"
 ---
 
-## UCSB Focus
+## Hometown
 
-## Adventures
+I was raised in Oakland, CA, which is in the Bay Area, right across the bay from San Francisco. I grew up exploring the bay and California in general and fell in love with the area.
 
-## Goals
+## Career Goals
+
+After my time ends at UCSB, I would like to enter the sphere of research. Ideally, I would like to become a PhD student studying wildfire and its ecological impacts. After taking a fire ecology class and beginning my work at the LEAF Lab, I have realized that is a signficant interest of mine that I would like to pursue as a career.
