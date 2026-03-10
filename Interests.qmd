@@ -24,13 +24,18 @@ mapRDS <- readRDS("output_file..rds")
 site_map <- leaflet() |> 
   addProviderTiles(providers$Esri.WorldImagery, group = "ESRI World Imagery") |> 
   addProviderTiles(providers$Esri.OceanBasemap, group = "ESRI Oceans") |> 
-setView(lng =  44.203130, lat = -107.937526, zoom = 1) |> 
+setView(lng =  43.604395, lat = -103.243509, zoom = 1) |> 
    addMiniMap(toggleDisplay = TRUE, minimized = TRUE) |> 
   addMarkers(data = mapRDS, group = "Sites",
              lng = ~Long, lat = ~Lat,
-             popup = paste("State:", Site, "<br>", 
-                           "Coordinates (lat/long):", Lat.long))
+             popup = paste("State:", mapRDS$Site, "<br>", 
+                           "Coordinates (lat/long):", mapRDS$Lat.long)) |> 
+  addLayersControl(
+    baseGroups = c("ESRA World Imagery", "ESRI Oceans"), 
+    overlayGroups = c("Sites")
+  )
   
+site_map
 ```
 
 ## Tidepools
