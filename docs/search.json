@@ -4,7 +4,7 @@
     "href": "Interests.html#tidepools",
     "title": "Interests",
     "section": "Tidepools",
-    "text": "Tidepools"
+    "text": "Tidepools\nIn my free time, I enjoy going to the tidepools during low tide and seeing what I can find there."
   },
   {
     "objectID": "Interests.html#plants",
@@ -14,18 +14,25 @@
     "text": "Plants"
   },
   {
-    "objectID": "about.html#adventures",
-    "href": "about.html#adventures",
+    "objectID": "about.html",
+    "href": "about.html",
     "title": "About Me",
-    "section": "Adventures",
-    "text": "Adventures"
+    "section": "",
+    "text": "I was raised in Oakland, CA, which is in the Bay Area, right across the bay from San Francisco. I grew up exploring the bay and California in general and fell in love with the area."
   },
   {
-    "objectID": "about.html#goals",
-    "href": "about.html#goals",
+    "objectID": "about.html#hometown",
+    "href": "about.html#hometown",
     "title": "About Me",
-    "section": "Goals",
-    "text": "Goals"
+    "section": "",
+    "text": "I was raised in Oakland, CA, which is in the Bay Area, right across the bay from San Francisco. I grew up exploring the bay and California in general and fell in love with the area."
+  },
+  {
+    "objectID": "about.html#career-goals",
+    "href": "about.html#career-goals",
+    "title": "About Me",
+    "section": "Career Goals",
+    "text": "Career Goals\nAfter my time ends at UCSB, I would like to enter the sphere of research. Ideally, I would like to become a PhD student studying wildfire and its ecological impacts. After taking a fire ecology class and beginning my work at the LEAF Lab, I have realized that is a signficant interest of mine that I would like to pursue as a career."
   },
   {
     "objectID": "Resume.html",

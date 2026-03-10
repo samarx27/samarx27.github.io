@@ -5,6 +5,36 @@ format: html
 
 ## Travels
 
+In my life, I've had the privilege of being able to travel to different places and see different parts of the country. Below is an interactive map of my travel destinations! Feel free to toggle on and off the code chunks.
+
+```{r}
+#| label: Set Up
+#| message: false
+# adding necessary packages
+library(tidyverse) 
+library(plotly) 
+library(DT)
+library(leaflet) 
+map <- read.csv("travel_data.csv")
+saveRDS(map, file = "output_file..rds")
+mapRDS <- readRDS("output_file..rds")
+```
+
+```{r}
+site_map <- leaflet() |> 
+  addProviderTiles(providers$Esri.WorldImagery, group = "ESRI World Imagery") |> 
+  addProviderTiles(providers$Esri.OceanBasemap, group = "ESRI Oceans") |> 
+setView(lng =  44.203130, lat = -107.937526, zoom = 1) |> 
+   addMiniMap(toggleDisplay = TRUE, minimized = TRUE) |> 
+  addMarkers(data = mapRDS, group = "Sites",
+             lng = ~Long, lat = ~Lat,
+             popup = paste("State:", Site, "<br>", 
+                           "Coordinates (lat/long):", Lat.long))
+  
+```
+
 ## Tidepools
+
+In my free time, I enjoy going to the tidepools during low tide and seeing what I can find there.
 
 ## Plants
