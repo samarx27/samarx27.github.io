@@ -10,6 +10,8 @@ In my life, I've had the privilege of being able to travel to different places a
 ```{r}
 #| label: Set Up
 #| message: false
+#| echo: true
+#| code-fold: true
 # adding necessary packages
 library(tidyverse) 
 library(plotly) 
@@ -21,10 +23,12 @@ mapRDS <- readRDS("output_file..rds")
 ```
 
 ```{r}
+#| echo: true
+#| code-fold: true
 site_map <- leaflet() |> 
   addProviderTiles(providers$Esri.WorldImagery, group = "ESRI World Imagery") |> 
   addProviderTiles(providers$Esri.OceanBasemap, group = "ESRI Oceans") |> 
-setView(lng =  43.604395, lat = -103.243509, zoom = 1) |> 
+setView(lng =  -100, lat = 40, zoom = 2) |> 
    addMiniMap(toggleDisplay = TRUE, minimized = TRUE) |> 
   addMarkers(data = mapRDS, group = "Sites",
              lng = ~Long, lat = ~Lat,
