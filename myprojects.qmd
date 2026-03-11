@@ -7,3 +7,46 @@ listing:
   sort: "date desc" 
   categories: true
 ---
+
+## Reading in all of the necessary packages for these visualizations
+
+```{r}
+#| label: Set Up
+#| message: false
+#| echo: true
+#| code-fold: true
+library(tidyverse) #loading in tidyverse
+library(here) #loading in here
+library(janitor) #loading in janitor
+library(readxl) #loading in readxl
+library(ggeffects) #loading in ggeffects
+library(knitr) #loading in knitr
+my_data <- read_csv("my_data Sheet2 copy.csv"
+  )
+```
+
+## Creating a Jitter Plot to display the times I woke up for school and non-school days, the median, and the interquartile ranges
+
+```{r}
+#| label: Jitter Plot displaying wake up time for school and non school days
+#| echo: true
+#| code-fold: true
+my_data_clean <- my_data |> #labeling new data frame
+clean_names() #cleaned names to only include lower case letters and underscores
+ggplot(data = my_data_clean, #using my_data_clean data frame
+aes(x = school_day_yes_no, #placing school_day_yes_no on the x-axis
+y = wake_up_time_hrs_min, #placing wake_up_time_hrs_min on the y-axis
+color = school_day_yes_no)) + #color by school_day_yes_no
+geom_boxplot() + #creating a boxplot
+labs(x = "School Day", #labeling the x-axis as School Day
+y = "Wake Up time (hrs:min)", #labeling the y-axis as Wake Up time (hrs:min)
+title = "Wake Up Time for School Days vs Non-School Days", #creating title
+subtitle = "03/01/2026") + #creating subtitle
+geom_jitter() + #creating jittered points
+theme_light() + #changing theme to light
+scale_color_manual(values = c("yes" = "blue4",
+"no" = "red4")) + #changing colors based on whether or not it is a school day
+theme(legend.position = "none") #removing the legend
+```
+
+**Figure 1.** This figure shows the distribution of recorded wake up times between school days, which is denoted by the blue points, and non-school days, which is denoted by the red points. Additionally, the figure shows the medians and quartiles for each type of day, represented by the boxes and lines, indicating that the median wake up time is later on non-school days than on school days.
