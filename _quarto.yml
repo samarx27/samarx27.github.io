@@ -15,10 +15,7 @@ website:
 
 format:
   html:
-    theme:
-      light: solar
-      dark: cerulean
-    css: styles.css
+    theme: styles.scss
     toc: true
     page-layout: full
 
