@@ -1,0 +1,25 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Sequoia Marx"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+      - Interests.qmd
+      - Resume.qmd
+      - myprojects.qmd
+
+format:
+  html:
+    theme:
+      - styles.scss
+      - slate
+    toc: true
+    page-layout: full
+
+editor: visual
+
