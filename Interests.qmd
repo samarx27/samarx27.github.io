@@ -59,7 +59,7 @@ In my free time, I enjoy going to the tidepools during low tide and seeing what 
 
 ## Plants
 
-I also enjoy seeing different kinds of plants. Some of my favorites include redwood trees, California morning glories, and poppies. 
+I also enjoy hiking and seeing different kinds of plants. Some of my favorites include redwood trees, California morning glories, and poppies. 
 
 <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; width: 100%;">
 
