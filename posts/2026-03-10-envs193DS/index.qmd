@@ -1,0 +1,9 @@
+---
+title: "Data Visualization"
+format: html
+description: "This is a visualization of my personal data set collected Winter Quarter 2026 for Environmental Studies 193DS."
+author: 
+- name: "Sequoia Marx"
+date: "03-10-2026"
+---
+

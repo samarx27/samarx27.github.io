@@ -3,7 +3,7 @@ title: "Projects"
 format: html
 listing: 
   contents: posts
-  type: grid 
+  type: table 
   sort: "date desc" 
   categories: true
 ---
