@@ -7,8 +7,9 @@ author:
 date: "03-10-2026"
 ---
 
+One of my projects for my Enviromental Studies 193DS course this quarter was to record and display a personal data set. For my data set, I chose to record the times I woke up each day and compare it to whether or not it was a school day. I chose to record this data specifically because I wanted to test this hypothesis. I think I wake up around the same time each day, regardless of whether or not it is a school day. My focus question was: Does the time I wake up differ between school and non-school days?
 
-## Reading in all of the necessary packages for these visualizations
+## Reading in all of the packages for this visualization
 
 ```{r}
 #| label: Set Up
@@ -28,8 +29,9 @@ my_data <- read_csv(
   ))
 ```
 
-## Creating a Jitter Plot to display the times I woke up for school and non-school days, the median, and the interquartile ranges
+## Creating a Jitter Plot to display my data
 
+Below is the Jitter Plot and Box Plot I created to display the times I woke up for school and non-school days, the median, and the interquartile ranges. I decided to compare the medians of the data because they are less skewed by potential outliers. 
 ```{r}
 #| label: Jitter Plot displaying wake up time for school and non school days
 #| echo: true
