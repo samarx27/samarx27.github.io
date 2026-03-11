@@ -15,7 +15,9 @@ website:
 
 format:
   html:
-    theme: styles.scss
+    theme:
+      - styles.scss
+      - slate
     toc: true
     page-layout: full
 
