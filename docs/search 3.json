@@ -1,0 +1,100 @@
+[
+  {
+    "objectID": "Interests.html",
+    "href": "Interests.html",
+    "title": "Interests",
+    "section": "",
+    "text": "In my life, I’ve had the privilege of being able to travel to different places and see different parts of the country. Below is an interactive map of my travel destinations! Feel free to toggle on and off the code chunks.\n\n\nCode\n# adding necessary packages\nlibrary(tidyverse) \nlibrary(plotly) \nlibrary(DT)\nlibrary(leaflet) \nmap &lt;- read.csv(\"travel_data.csv\")\nsaveRDS(map, file = \"output_file..rds\")\nmapRDS &lt;- readRDS(\"output_file..rds\")\n\n\n\n\nCode\nsite_map &lt;- leaflet() |&gt; \n  addProviderTiles(providers$Esri.WorldImagery, group = \"ESRI World Imagery\") |&gt; \n  addProviderTiles(providers$Esri.OceanBasemap, group = \"ESRI Oceans\") |&gt; \nsetView(lng =  -100, lat = 40, zoom = 2) |&gt; \n   addMiniMap(toggleDisplay = TRUE, minimized = TRUE) |&gt; \n  addMarkers(data = mapRDS, group = \"Sites\",\n             lng = ~Long, lat = ~Lat,\n             popup = paste(\"State:\", mapRDS$Site, \"&lt;br&gt;\", \n                           \"Coordinates (lat/long):\", mapRDS$Lat.long)) |&gt; \n  addLayersControl(\n    baseGroups = c(\"ESRA World Imagery\", \"ESRI Oceans\"), \n    overlayGroups = c(\"Sites\")\n  )\n  \nsite_map"
+  },
+  {
+    "objectID": "Interests.html#travels",
+    "href": "Interests.html#travels",
+    "title": "Interests",
+    "section": "",
+    "text": "In my life, I’ve had the privilege of being able to travel to different places and see different parts of the country. Below is an interactive map of my travel destinations! Feel free to toggle on and off the code chunks.\n\n\nCode\n# adding necessary packages\nlibrary(tidyverse) \nlibrary(plotly) \nlibrary(DT)\nlibrary(leaflet) \nmap &lt;- read.csv(\"travel_data.csv\")\nsaveRDS(map, file = \"output_file..rds\")\nmapRDS &lt;- readRDS(\"output_file..rds\")\n\n\n\n\nCode\nsite_map &lt;- leaflet() |&gt; \n  addProviderTiles(providers$Esri.WorldImagery, group = \"ESRI World Imagery\") |&gt; \n  addProviderTiles(providers$Esri.OceanBasemap, group = \"ESRI Oceans\") |&gt; \nsetView(lng =  -100, lat = 40, zoom = 2) |&gt; \n   addMiniMap(toggleDisplay = TRUE, minimized = TRUE) |&gt; \n  addMarkers(data = mapRDS, group = \"Sites\",\n             lng = ~Long, lat = ~Lat,\n             popup = paste(\"State:\", mapRDS$Site, \"&lt;br&gt;\", \n                           \"Coordinates (lat/long):\", mapRDS$Lat.long)) |&gt; \n  addLayersControl(\n    baseGroups = c(\"ESRA World Imagery\", \"ESRI Oceans\"), \n    overlayGroups = c(\"Sites\")\n  )\n  \nsite_map"
+  },
+  {
+    "objectID": "Interests.html#tidepools",
+    "href": "Interests.html#tidepools",
+    "title": "Interests",
+    "section": "Tidepools",
+    "text": "Tidepools\nIn my free time, I enjoy going to the tidepools during low tide and seeing what I can find there."
+  },
+  {
+    "objectID": "Interests.html#plants",
+    "href": "Interests.html#plants",
+    "title": "Interests",
+    "section": "Plants",
+    "text": "Plants\nI also enjoy seeing different kinds of plants. Some of my favorites include redwood treies, California morning glories, and poppies."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About Me",
+    "section": "",
+    "text": "I was raised in Oakland, CA, which is in the Bay Area, right across the bay from San Francisco. I grew up exploring the bay and California in general and fell in love with the area."
+  },
+  {
+    "objectID": "about.html#hometown",
+    "href": "about.html#hometown",
+    "title": "About Me",
+    "section": "",
+    "text": "I was raised in Oakland, CA, which is in the Bay Area, right across the bay from San Francisco. I grew up exploring the bay and California in general and fell in love with the area."
+  },
+  {
+    "objectID": "about.html#career-goals",
+    "href": "about.html#career-goals",
+    "title": "About Me",
+    "section": "Career Goals",
+    "text": "Career Goals\nAfter my time ends at UCSB, I would like to enter the sphere of research. Ideally, I would like to become a PhD student studying wildfire and its ecological impacts. After taking a fire ecology class and beginning my work at the LEAF Lab, I have realized that is a signficant interest of mine that I would like to pursue as a career."
+  },
+  {
+    "objectID": "myprojects.html",
+    "href": "myprojects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\n\nTitle\n\n\n\nAuthor\n\n\n\n\n\n\n\n\nMar 10, 2026\n\n\nData Visualization\n\n\nSequoia Marx\n\n\n\n\n\n\nMar 10, 2026\n\n\nBonnie Reiss Poster\n\n\nSequoia Marx\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/2026-03-10-envs193DS/index.html",
+    "href": "posts/2026-03-10-envs193DS/index.html",
+    "title": "Data Visualization",
+    "section": "",
+    "text": "Code\nlibrary(tidyverse) #loading in tidyverse\nlibrary(here) #loading in here\nlibrary(janitor) #loading in janitor\nlibrary(readxl) #loading in readxl\nlibrary(ggeffects) #loading in ggeffects\nlibrary(knitr) #loading in knitr\nmy_data &lt;- read_csv(\n  here(\"posts\", \n       \"2026-03-10-envs193DS\",\n  \"my_data Sheet2 copy.csv\"\n  ))"
+  },
+  {
+    "objectID": "posts/2026-03-10-envs193DS/index.html#reading-in-all-of-the-necessary-packages-for-these-visualizations",
+    "href": "posts/2026-03-10-envs193DS/index.html#reading-in-all-of-the-necessary-packages-for-these-visualizations",
+    "title": "Data Visualization",
+    "section": "",
+    "text": "Code\nlibrary(tidyverse) #loading in tidyverse\nlibrary(here) #loading in here\nlibrary(janitor) #loading in janitor\nlibrary(readxl) #loading in readxl\nlibrary(ggeffects) #loading in ggeffects\nlibrary(knitr) #loading in knitr\nmy_data &lt;- read_csv(\n  here(\"posts\", \n       \"2026-03-10-envs193DS\",\n  \"my_data Sheet2 copy.csv\"\n  ))"
+  },
+  {
+    "objectID": "posts/2026-03-10-envs193DS/index.html#creating-a-jitter-plot-to-display-the-times-i-woke-up-for-school-and-non-school-days-the-median-and-the-interquartile-ranges",
+    "href": "posts/2026-03-10-envs193DS/index.html#creating-a-jitter-plot-to-display-the-times-i-woke-up-for-school-and-non-school-days-the-median-and-the-interquartile-ranges",
+    "title": "Data Visualization",
+    "section": "Creating a Jitter Plot to display the times I woke up for school and non-school days, the median, and the interquartile ranges",
+    "text": "Creating a Jitter Plot to display the times I woke up for school and non-school days, the median, and the interquartile ranges\n\n\nCode\nmy_data_clean &lt;- my_data |&gt; #labeling new data frame\nclean_names() #cleaned names to only include lower case letters and underscores\nggplot(data = my_data_clean, #using my_data_clean data frame\naes(x = school_day_yes_no, #placing school_day_yes_no on the x-axis\ny = wake_up_time_hrs_min, #placing wake_up_time_hrs_min on the y-axis\ncolor = school_day_yes_no)) + #color by school_day_yes_no\ngeom_boxplot() + #creating a boxplot\nlabs(x = \"School Day\", #labeling the x-axis as School Day\ny = \"Wake Up time (hrs:min)\", #labeling the y-axis as Wake Up time (hrs:min)\ntitle = \"Wake Up Time for School Days vs Non-School Days\", #creating title\nsubtitle = \"03/01/2026\") + #creating subtitle\ngeom_jitter() + #creating jittered points\ntheme_light() + #changing theme to light\nscale_color_manual(values = c(\"yes\" = \"blue4\",\n\"no\" = \"red4\")) + #changing colors based on whether or not it is a school day\ntheme(legend.position = \"none\") #removing the legend\n\n\n\n\n\n\n\n\n\nFigure 1. This figure shows the distribution of recorded wake up times between school days, which is denoted by the blue points, and non-school days, which is denoted by the red points. Additionally, the figure shows the medians and quartiles for each type of day, represented by the boxes and lines, indicating that the median wake up time is later on non-school days than on school days."
+  },
+  {
+    "objectID": "Resume.html",
+    "href": "Resume.html",
+    "title": "Resume",
+    "section": "",
+    "text": "Your browser could not display the PDF. Download it here."
+  },
+  {
+    "objectID": "posts/2026-03-10-garden-club-proj/index.html",
+    "href": "posts/2026-03-10-garden-club-proj/index.html",
+    "title": "Bonnie Reiss Poster",
+    "section": "",
+    "text": "This poster was initially created during Spring of 2025 for my role as a Bonnie Reiss Food and Agriculture Fellow. It was inspired by my role with the Edible Campus Program working in the community gardens. In this poster, I explore different models for community gardens, ways to engage the community, and future implications.\n\n\nYour browser could not display the PDF. Download it here."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Sequoia Marx",
+    "section": "",
+    "text": "I am a third year Environmental Studies major at the University of California, Santa Barbara. I am currently serving as the Garden Operations Coordinator for the Methodist Community Garden. I also work for the LEAF lab and the Aquatic Invertebrate Lab with the Cheadle Center."
+  }
+]
