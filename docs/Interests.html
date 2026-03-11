@@ -317,16 +317,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">About Me</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./projects.html"> 
-<span class="menu-text">Projects</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link active" href="./Interests.html" aria-current="page"> 
 <span class="menu-text">Interests</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./Resume.html"> 
 <span class="menu-text">Resume</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./myprojects.html"> 
+<span class="menu-text">Projects</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -378,6 +378,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="travels">Travels</h2>
 <p>In my life, I’ve had the privilege of being able to travel to different places and see different parts of the country. Below is an interactive map of my travel destinations! Feel free to toggle on and off the code chunks.</p>
 <div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># adding necessary packages</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse) </span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(plotly) </span>
@@ -386,8 +388,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>map <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"travel_data.csv"</span>)</span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">saveRDS</span>(map, <span class="at">file =</span> <span class="st">"output_file..rds"</span>)</span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>mapRDS <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">"output_file..rds"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
 </div>
 <div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>site_map <span class="ot">&lt;-</span> <span class="fu">leaflet</span>() <span class="sc">|&gt;</span> </span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addProviderTiles</span>(providers<span class="sc">$</span>Esri.WorldImagery, <span class="at">group =</span> <span class="st">"ESRI World Imagery"</span>) <span class="sc">|&gt;</span> </span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addProviderTiles</span>(providers<span class="sc">$</span>Esri.OceanBasemap, <span class="at">group =</span> <span class="st">"ESRI Oceans"</span>) <span class="sc">|&gt;</span> </span>
@@ -403,9 +408,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  )</span>
 <span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  </span>
 <span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>site_map</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
 <div class="cell-output-display">
-<div class="leaflet html-widget html-fill-item" id="htmlwidget-b66813e126244917df31" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-b66813e126244917df31">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addProviderTiles","args":["Esri.WorldImagery",null,"ESRI World Imagery",{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addProviderTiles","args":["Esri.OceanBasemap",null,"ESRI Oceans",{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addMiniMap","args":[null,null,"bottomright",150,150,19,19,-5,false,false,false,true,false,true,{"color":"#ff7800","weight":1,"clickable":false},{"color":"#000000","weight":1,"clickable":false,"opacity":0,"fillOpacity":0},{"hideText":"Hide MiniMap","showText":"Show MiniMap"},[]]},{"method":"addMarkers","args":[[47.966198,48.491746,43.364414,37.799916,21.292278,36.713442,35.320851,43.673531,47.56525,37.38355,35.426718,39.192022,46.464417,43.604395,37.711657,41.85597,41.047357,28.672858,58.394981,41.603864,42.002672],[-124.400347,-113.692137,-124.243242,-122.18023,-157.841563,-115.982166,-111.795914,-110.068592,-115.874666,-113.16795,-106.872155,-108.061878,-102.93869,-103.243509,-101.296146,-87.78475299999999,-85.20951599999999,-81.459509,-134.915251,-83.648527,-86.24473500000001],null,null,"Sites",{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},["State: Washington <br> Coordinates (lat/long): 47.966198,-124.400347","State: Montana <br> Coordinates (lat/long): 48.491746,-113.692137","State: Oregon <br> Coordinates (lat/long): 43.364414,-124.243242","State: California <br> Coordinates (lat/long): 37.799916,-122.18023","State: Hawaii <br> Coordinates (lat/long): 21.292278,-157.841563","State: Nevada <br> Coordinates (lat/long): 36.713442,-115.982166","State: Arizona <br> Coordinates (lat/long): 35.320851,-111.795914","State: Wyoming <br> Coordinates (lat/long): 43.673531,-110.068592","State: Idaho <br> Coordinates (lat/long): 47.56525,-115.874666","State: Utah <br> Coordinates (lat/long): 37.38355,-113.16795","State: New Mexico <br> Coordinates (lat/long): 35.426718,-106.872155","State: Colorado <br> Coordinates (lat/long): 39.192022,-108.061878","State: North Dakota <br> Coordinates (lat/long): 46.464417,-102.93869","State: South Dakota <br> Coordinates (lat/long): 43.604395,-103.243509","State: Kansas <br> Coordinates (lat/long): 37.711657,-101.296146","State: Illinois <br> Coordinates (lat/long): 41.85597,-87.784753","State: Indiana <br> Coordinates (lat/long): 41.047357,-85.209516","State: Florida <br> Coordinates (lat/long): 28.672858,-81.459509","State: Alaska <br> Coordinates (lat/long): 58.394981,-134.915251","State: Ohio <br> Coordinates (lat/long): 41.603864,-83.648527","State: Michigan  <br> Coordinates (lat/long): 42.002672,-86.244735"],null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addLayersControl","args":[["ESRA World Imagery","ESRI Oceans"],"Sites",{"collapsed":true,"autoZIndex":true,"position":"topright"}]}],"setView":[[40,-100],2,[]],"limits":{"lat":[21.292278,58.394981],"lng":[-157.841563,-81.459509]}},"evals":[],"jsHooks":[]}</script>
+<div class="leaflet html-widget html-fill-item" id="htmlwidget-70052fc5fc22fa2c4ec5" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-70052fc5fc22fa2c4ec5">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addProviderTiles","args":["Esri.WorldImagery",null,"ESRI World Imagery",{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addProviderTiles","args":["Esri.OceanBasemap",null,"ESRI Oceans",{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addMiniMap","args":[null,null,"bottomright",150,150,19,19,-5,false,false,false,true,false,true,{"color":"#ff7800","weight":1,"clickable":false},{"color":"#000000","weight":1,"clickable":false,"opacity":0,"fillOpacity":0},{"hideText":"Hide MiniMap","showText":"Show MiniMap"},[]]},{"method":"addMarkers","args":[[47.966198,48.491746,43.364414,37.799916,21.292278,36.713442,35.320851,43.673531,47.56525,37.38355,35.426718,39.192022,46.464417,43.604395,37.711657,41.85597,41.047357,28.672858,58.394981,41.603864,42.002672],[-124.400347,-113.692137,-124.243242,-122.18023,-157.841563,-115.982166,-111.795914,-110.068592,-115.874666,-113.16795,-106.872155,-108.061878,-102.93869,-103.243509,-101.296146,-87.78475299999999,-85.20951599999999,-81.459509,-134.915251,-83.648527,-86.24473500000001],null,null,"Sites",{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},["State: Washington <br> Coordinates (lat/long): 47.966198,-124.400347","State: Montana <br> Coordinates (lat/long): 48.491746,-113.692137","State: Oregon <br> Coordinates (lat/long): 43.364414,-124.243242","State: California <br> Coordinates (lat/long): 37.799916,-122.18023","State: Hawaii <br> Coordinates (lat/long): 21.292278,-157.841563","State: Nevada <br> Coordinates (lat/long): 36.713442,-115.982166","State: Arizona <br> Coordinates (lat/long): 35.320851,-111.795914","State: Wyoming <br> Coordinates (lat/long): 43.673531,-110.068592","State: Idaho <br> Coordinates (lat/long): 47.56525,-115.874666","State: Utah <br> Coordinates (lat/long): 37.38355,-113.16795","State: New Mexico <br> Coordinates (lat/long): 35.426718,-106.872155","State: Colorado <br> Coordinates (lat/long): 39.192022,-108.061878","State: North Dakota <br> Coordinates (lat/long): 46.464417,-102.93869","State: South Dakota <br> Coordinates (lat/long): 43.604395,-103.243509","State: Kansas <br> Coordinates (lat/long): 37.711657,-101.296146","State: Illinois <br> Coordinates (lat/long): 41.85597,-87.784753","State: Indiana <br> Coordinates (lat/long): 41.047357,-85.209516","State: Florida <br> Coordinates (lat/long): 28.672858,-81.459509","State: Alaska <br> Coordinates (lat/long): 58.394981,-134.915251","State: Ohio <br> Coordinates (lat/long): 41.603864,-83.648527","State: Michigan  <br> Coordinates (lat/long): 42.002672,-86.244735"],null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addLayersControl","args":[["ESRA World Imagery","ESRI Oceans"],"Sites",{"collapsed":true,"autoZIndex":true,"position":"topright"}]}],"setView":[[40,-100],2,[]],"limits":{"lat":[21.292278,58.394981],"lng":[-157.841563,-81.459509]}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </section>

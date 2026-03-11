@@ -9,9 +9,9 @@ website:
       - href: index.qmd
         text: Home
       - about.qmd
-      - projects.qmd
       - Interests.qmd
       - Resume.qmd
+      - myprojects.qmd
 
 format:
   html:

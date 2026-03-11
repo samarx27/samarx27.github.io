@@ -1,0 +1,9 @@
+---
+title: "Projects"
+format: html
+listing: 
+  contents: posts
+  type: grid 
+  sort: "date desc" 
+  categories: true
+---

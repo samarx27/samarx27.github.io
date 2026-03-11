@@ -4,14 +4,14 @@
     "href": "Interests.html",
     "title": "Interests",
     "section": "",
-    "text": "In my life, I’ve had the privilege of being able to travel to different places and see different parts of the country. Below is an interactive map of my travel destinations! Feel free to toggle on and off the code chunks.\n\n# adding necessary packages\nlibrary(tidyverse) \nlibrary(plotly) \nlibrary(DT)\nlibrary(leaflet) \nmap &lt;- read.csv(\"travel_data.csv\")\nsaveRDS(map, file = \"output_file..rds\")\nmapRDS &lt;- readRDS(\"output_file..rds\")\n\n\nsite_map &lt;- leaflet() |&gt; \n  addProviderTiles(providers$Esri.WorldImagery, group = \"ESRI World Imagery\") |&gt; \n  addProviderTiles(providers$Esri.OceanBasemap, group = \"ESRI Oceans\") |&gt; \nsetView(lng =  -100, lat = 40, zoom = 2) |&gt; \n   addMiniMap(toggleDisplay = TRUE, minimized = TRUE) |&gt; \n  addMarkers(data = mapRDS, group = \"Sites\",\n             lng = ~Long, lat = ~Lat,\n             popup = paste(\"State:\", mapRDS$Site, \"&lt;br&gt;\", \n                           \"Coordinates (lat/long):\", mapRDS$Lat.long)) |&gt; \n  addLayersControl(\n    baseGroups = c(\"ESRA World Imagery\", \"ESRI Oceans\"), \n    overlayGroups = c(\"Sites\")\n  )\n  \nsite_map"
+    "text": "In my life, I’ve had the privilege of being able to travel to different places and see different parts of the country. Below is an interactive map of my travel destinations! Feel free to toggle on and off the code chunks.\n\n\nCode\n# adding necessary packages\nlibrary(tidyverse) \nlibrary(plotly) \nlibrary(DT)\nlibrary(leaflet) \nmap &lt;- read.csv(\"travel_data.csv\")\nsaveRDS(map, file = \"output_file..rds\")\nmapRDS &lt;- readRDS(\"output_file..rds\")\n\n\n\n\nCode\nsite_map &lt;- leaflet() |&gt; \n  addProviderTiles(providers$Esri.WorldImagery, group = \"ESRI World Imagery\") |&gt; \n  addProviderTiles(providers$Esri.OceanBasemap, group = \"ESRI Oceans\") |&gt; \nsetView(lng =  -100, lat = 40, zoom = 2) |&gt; \n   addMiniMap(toggleDisplay = TRUE, minimized = TRUE) |&gt; \n  addMarkers(data = mapRDS, group = \"Sites\",\n             lng = ~Long, lat = ~Lat,\n             popup = paste(\"State:\", mapRDS$Site, \"&lt;br&gt;\", \n                           \"Coordinates (lat/long):\", mapRDS$Lat.long)) |&gt; \n  addLayersControl(\n    baseGroups = c(\"ESRA World Imagery\", \"ESRI Oceans\"), \n    overlayGroups = c(\"Sites\")\n  )\n  \nsite_map"
   },
   {
     "objectID": "Interests.html#travels",
     "href": "Interests.html#travels",
     "title": "Interests",
     "section": "",
-    "text": "In my life, I’ve had the privilege of being able to travel to different places and see different parts of the country. Below is an interactive map of my travel destinations! Feel free to toggle on and off the code chunks.\n\n# adding necessary packages\nlibrary(tidyverse) \nlibrary(plotly) \nlibrary(DT)\nlibrary(leaflet) \nmap &lt;- read.csv(\"travel_data.csv\")\nsaveRDS(map, file = \"output_file..rds\")\nmapRDS &lt;- readRDS(\"output_file..rds\")\n\n\nsite_map &lt;- leaflet() |&gt; \n  addProviderTiles(providers$Esri.WorldImagery, group = \"ESRI World Imagery\") |&gt; \n  addProviderTiles(providers$Esri.OceanBasemap, group = \"ESRI Oceans\") |&gt; \nsetView(lng =  -100, lat = 40, zoom = 2) |&gt; \n   addMiniMap(toggleDisplay = TRUE, minimized = TRUE) |&gt; \n  addMarkers(data = mapRDS, group = \"Sites\",\n             lng = ~Long, lat = ~Lat,\n             popup = paste(\"State:\", mapRDS$Site, \"&lt;br&gt;\", \n                           \"Coordinates (lat/long):\", mapRDS$Lat.long)) |&gt; \n  addLayersControl(\n    baseGroups = c(\"ESRA World Imagery\", \"ESRI Oceans\"), \n    overlayGroups = c(\"Sites\")\n  )\n  \nsite_map"
+    "text": "In my life, I’ve had the privilege of being able to travel to different places and see different parts of the country. Below is an interactive map of my travel destinations! Feel free to toggle on and off the code chunks.\n\n\nCode\n# adding necessary packages\nlibrary(tidyverse) \nlibrary(plotly) \nlibrary(DT)\nlibrary(leaflet) \nmap &lt;- read.csv(\"travel_data.csv\")\nsaveRDS(map, file = \"output_file..rds\")\nmapRDS &lt;- readRDS(\"output_file..rds\")\n\n\n\n\nCode\nsite_map &lt;- leaflet() |&gt; \n  addProviderTiles(providers$Esri.WorldImagery, group = \"ESRI World Imagery\") |&gt; \n  addProviderTiles(providers$Esri.OceanBasemap, group = \"ESRI Oceans\") |&gt; \nsetView(lng =  -100, lat = 40, zoom = 2) |&gt; \n   addMiniMap(toggleDisplay = TRUE, minimized = TRUE) |&gt; \n  addMarkers(data = mapRDS, group = \"Sites\",\n             lng = ~Long, lat = ~Lat,\n             popup = paste(\"State:\", mapRDS$Site, \"&lt;br&gt;\", \n                           \"Coordinates (lat/long):\", mapRDS$Lat.long)) |&gt; \n  addLayersControl(\n    baseGroups = c(\"ESRA World Imagery\", \"ESRI Oceans\"), \n    overlayGroups = c(\"Sites\")\n  )\n  \nsite_map"
   },
   {
     "objectID": "Interests.html#tidepools",
@@ -49,9 +49,23 @@
     "text": "Career Goals\nAfter my time ends at UCSB, I would like to enter the sphere of research. Ideally, I would like to become a PhD student studying wildfire and its ecological impacts. After taking a fire ecology class and beginning my work at the LEAF Lab, I have realized that is a signficant interest of mine that I would like to pursue as a career."
   },
   {
+    "objectID": "myprojects.html",
+    "href": "myprojects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Bonnie Reiss Poster\n\n\nThis is the poster I created for my work in the Bonnie Reiss Food and Agriculture Fellowship in 2025.\n\n\n\nSequoia Marx\n\n\nMar 10, 2026\n\n\n\n\n\n\nNo matching items"
+  },
+  {
     "objectID": "Resume.html",
     "href": "Resume.html",
     "title": "Resume",
+    "section": "",
+    "text": "Your browser could not display the PDF. Download it here."
+  },
+  {
+    "objectID": "posts/2026-03-10-garden-club-proj/index.html",
+    "href": "posts/2026-03-10-garden-club-proj/index.html",
+    "title": "Bonnie Reiss Poster",
     "section": "",
     "text": "Your browser could not display the PDF. Download it here."
   },
