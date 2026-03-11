@@ -8,7 +8,7 @@ about:
   image-width: 17em
   links:
     - text: LinkedIn
-      href: www.linkedin.com/in/sequoia-marx-11a5b3308
+      href: www.linkedin.com/in/sequoia-a-marx
     - text: GitHub
       href: https://github.com/samarx27
     - text: Email
