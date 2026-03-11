@@ -45,6 +45,17 @@ site_map
 ## Tidepools
 
 In my free time, I enjoy going to the tidepools during low tide and seeing what I can find there.
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; width: 100%;">
+
+  <img src="octo.jpg" style="width: 100%; height: 120px; object-fit: cover;">
+  <img src="bat.jpg" style="width: 100%; height: 120px; object-fit: cover;">
+  <img src="crevice.jpg" style="width: 100%; height: 120px; object-fit: cover;">
+
+  <img src="brittles.jpg" style="width: 100%; height: 120px; object-fit: cover;">
+  <img src="dorid.jpg" style="width: 100%; height: 120px; object-fit: cover;">
+  <img src="crab.jpg" style="width: 100%; height: 120px; object-fit: cover;">
+
+</div>
 
 ## Plants
 
