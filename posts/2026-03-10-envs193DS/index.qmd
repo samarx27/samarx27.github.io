@@ -21,8 +21,11 @@ library(janitor) #loading in janitor
 library(readxl) #loading in readxl
 library(ggeffects) #loading in ggeffects
 library(knitr) #loading in knitr
-my_data <- read_csv("my_data Sheet2 copy.csv"
-  )
+my_data <- read_csv(
+  here("posts", 
+       "2026-03-10-envs193DS",
+  "my_data Sheet2 copy.csv"
+  ))
 ```
 
 ## Creating a Jitter Plot to display the times I woke up for school and non-school days, the median, and the interquartile ranges

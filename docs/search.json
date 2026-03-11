@@ -53,19 +53,26 @@
     "href": "myprojects.html",
     "title": "Projects",
     "section": "",
-    "text": "Code\nlibrary(tidyverse) #loading in tidyverse\nlibrary(here) #loading in here\nlibrary(janitor) #loading in janitor\nlibrary(readxl) #loading in readxl\nlibrary(ggeffects) #loading in ggeffects\nlibrary(knitr) #loading in knitr\nmy_data &lt;- read_csv(\"my_data Sheet2 copy.csv\"\n  )"
+    "text": "Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\n\nTitle\n\n\n\nAuthor\n\n\n\n\n\n\n\n\nMar 10, 2026\n\n\nData Visualization\n\n\nSequoia Marx\n\n\n\n\n\n\nMar 10, 2026\n\n\nBonnie Reiss Poster\n\n\nSequoia Marx\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "myprojects.html#reading-in-all-of-the-necessary-packages-for-these-visualizations",
-    "href": "myprojects.html#reading-in-all-of-the-necessary-packages-for-these-visualizations",
-    "title": "Projects",
+    "objectID": "posts/2026-03-10-envs193DS/index.html",
+    "href": "posts/2026-03-10-envs193DS/index.html",
+    "title": "Data Visualization",
     "section": "",
-    "text": "Code\nlibrary(tidyverse) #loading in tidyverse\nlibrary(here) #loading in here\nlibrary(janitor) #loading in janitor\nlibrary(readxl) #loading in readxl\nlibrary(ggeffects) #loading in ggeffects\nlibrary(knitr) #loading in knitr\nmy_data &lt;- read_csv(\"my_data Sheet2 copy.csv\"\n  )"
+    "text": "Code\nlibrary(tidyverse) #loading in tidyverse\nlibrary(here) #loading in here\nlibrary(janitor) #loading in janitor\nlibrary(readxl) #loading in readxl\nlibrary(ggeffects) #loading in ggeffects\nlibrary(knitr) #loading in knitr\nmy_data &lt;- read_csv(\n  here(\"posts\", \n       \"2026-03-10-envs193DS\",\n  \"my_data Sheet2 copy.csv\"\n  ))"
   },
   {
-    "objectID": "myprojects.html#creating-a-jitter-plot-to-display-the-times-i-woke-up-for-school-and-non-school-days-the-median-and-the-interquartile-ranges",
-    "href": "myprojects.html#creating-a-jitter-plot-to-display-the-times-i-woke-up-for-school-and-non-school-days-the-median-and-the-interquartile-ranges",
-    "title": "Projects",
+    "objectID": "posts/2026-03-10-envs193DS/index.html#reading-in-all-of-the-necessary-packages-for-these-visualizations",
+    "href": "posts/2026-03-10-envs193DS/index.html#reading-in-all-of-the-necessary-packages-for-these-visualizations",
+    "title": "Data Visualization",
+    "section": "",
+    "text": "Code\nlibrary(tidyverse) #loading in tidyverse\nlibrary(here) #loading in here\nlibrary(janitor) #loading in janitor\nlibrary(readxl) #loading in readxl\nlibrary(ggeffects) #loading in ggeffects\nlibrary(knitr) #loading in knitr\nmy_data &lt;- read_csv(\n  here(\"posts\", \n       \"2026-03-10-envs193DS\",\n  \"my_data Sheet2 copy.csv\"\n  ))"
+  },
+  {
+    "objectID": "posts/2026-03-10-envs193DS/index.html#creating-a-jitter-plot-to-display-the-times-i-woke-up-for-school-and-non-school-days-the-median-and-the-interquartile-ranges",
+    "href": "posts/2026-03-10-envs193DS/index.html#creating-a-jitter-plot-to-display-the-times-i-woke-up-for-school-and-non-school-days-the-median-and-the-interquartile-ranges",
+    "title": "Data Visualization",
     "section": "Creating a Jitter Plot to display the times I woke up for school and non-school days, the median, and the interquartile ranges",
     "text": "Creating a Jitter Plot to display the times I woke up for school and non-school days, the median, and the interquartile ranges\n\n\nCode\nmy_data_clean &lt;- my_data |&gt; #labeling new data frame\nclean_names() #cleaned names to only include lower case letters and underscores\nggplot(data = my_data_clean, #using my_data_clean data frame\naes(x = school_day_yes_no, #placing school_day_yes_no on the x-axis\ny = wake_up_time_hrs_min, #placing wake_up_time_hrs_min on the y-axis\ncolor = school_day_yes_no)) + #color by school_day_yes_no\ngeom_boxplot() + #creating a boxplot\nlabs(x = \"School Day\", #labeling the x-axis as School Day\ny = \"Wake Up time (hrs:min)\", #labeling the y-axis as Wake Up time (hrs:min)\ntitle = \"Wake Up Time for School Days vs Non-School Days\", #creating title\nsubtitle = \"03/01/2026\") + #creating subtitle\ngeom_jitter() + #creating jittered points\ntheme_light() + #changing theme to light\nscale_color_manual(values = c(\"yes\" = \"blue4\",\n\"no\" = \"red4\")) + #changing colors based on whether or not it is a school day\ntheme(legend.position = \"none\") #removing the legend\n\n\n\n\n\n\n\n\n\nFigure 1. This figure shows the distribution of recorded wake up times between school days, which is denoted by the blue points, and non-school days, which is denoted by the red points. Additionally, the figure shows the medians and quartiles for each type of day, represented by the boxes and lines, indicating that the median wake up time is later on non-school days than on school days."
   },
